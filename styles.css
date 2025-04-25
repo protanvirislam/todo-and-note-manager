@@ -179,14 +179,14 @@ table {
     }
 
     thead tr th:first-child {
-      
+      flex-basis: 70%;
     }
     thead tr th:last-child {
-      flex-basis: 120px;
+      flex-basis: 30%;
       text-align: center;
     }
     tbody tr td:first-child {
-     width: 70% !important;
+     flex-basis: 70% !important;
      
      word-wrap: break-word; /* Older spec */
      word-break: break-word; /* Modern spec */
@@ -198,7 +198,7 @@ table {
 
     
     tbody tr td:last-child {
-      width: 30%;
+      flex-basis: 30%;
       text-align: center;
       display: flex;
       flex-direction: row;
