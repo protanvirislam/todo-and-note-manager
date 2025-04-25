@@ -172,25 +172,40 @@ table {
         
     }
 
+    @media only screen and (max-width: 700px) {
+        tbody tr {
+            width: 300px;
+        }
+    }
+
     thead tr th:first-child {
-      flex-grow: 1;
+      
     }
     thead tr th:last-child {
       flex-basis: 120px;
       text-align: center;
     }
     tbody tr td:first-child {
-      flex-grow: 1;
+     width: 70% !important;
+     
+     word-wrap: break-word; /* Older spec */
+     word-break: break-word; /* Modern spec */
+     white-space: normal; /* Allow wrapping */
+   
+     
       
     }
+
+    
     tbody tr td:last-child {
-      flex-basis: 140px;
+      width: 30%;
       text-align: center;
       display: flex;
       flex-direction: row;
       justify-content: space-around;
       font-size: 18px;
-      height: 40px;
+      align-self: stretch;
+     
     }
 
   
