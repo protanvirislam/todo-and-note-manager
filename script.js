@@ -334,7 +334,7 @@ function renderAllNotes() {
    
 
   let li = document.createElement("li");
-   li.setAttribute("dat-note", index)
+   li.setAttribute("data-note", index)
   
   
   li.innerHTML = `
@@ -356,17 +356,23 @@ function renderAllNotes() {
 
 async function removeNote(e) {
    if(!e.target.classList.contains('list-close')) return ;
-   const getIndex = e.target.parentNode.getAttribute("data-note");
+
+
+
+const getIndex = e.target.parentNode.getAttribute("data-note");
+
+ 
 
    const noteList = getNotesFromStorage();
-    noteList.splice(getIndex, 1);
-    localStorage.setItem("noteList", JSON.stringify(noteList));
+    
 
      e.target.parentNode.style.transform =  "scale(2)";
      e.target.parentNode.style.opacity =  "0";
     
      setTimeout(()=> {
-      e.target.parentNode.remove();
+    e.target.parentNode.remove();
+    noteList.splice(getIndex, 1);
+    localStorage.setItem("noteList", JSON.stringify(noteList));
       renderAllNotes();
      }, 1000);
   
