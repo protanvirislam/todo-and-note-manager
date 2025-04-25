@@ -181,11 +181,10 @@ table {
     }
     tbody tr td:first-child {
       flex-grow: 1;
-      height: 40px;
       
     }
     tbody tr td:last-child {
-      flex-basis: 120px;
+      flex-basis: 140px;
       text-align: center;
       display: flex;
       flex-direction: row;
