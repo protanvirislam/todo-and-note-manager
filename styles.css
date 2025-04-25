@@ -1,0 +1,285 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.main-container {
+    display: flex;
+    flex-direction: row;
+ position: absolute;
+height: 700px;
+width: 900px;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+ border-radius: 10px;   
+overflow: hidden;
+    
+}
+
+@media only screen and (max-width: 700px) {
+    .main-container {
+        height: 100%;
+        width: 100%;
+        border-radius: 0px;
+        overflow: hidden;
+    }
+}
+
+.container-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 60px;
+    height: 100%;
+    background-color: #5C66DF;
+}
+.todo-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-around;
+   
+
+   
+   
+    
+}
+.todo-group i {
+    font-size: 25px;
+    color: white;
+    padding: 0px;
+    cursor: pointer;
+    padding: 18px;
+ 
+   
+}
+
+
+
+.active {
+    background-color: #2d2f5a !important;
+}
+.profile  {
+   
+    display: flex;
+ 
+    
+}
+.profile img {
+    cursor: pointer;
+    margin-top: auto;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.container-right {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+#all-todo {
+    opacity: 0;
+     position: absolute;
+     height: 100%;
+     width: 100%;
+    padding: 50px;
+
+    
+}
+
+
+
+
+#todo {
+    opacity: 0;
+  
+    position: absolute;
+    height: 100%;
+    width: 100%;
+   padding: 50px;
+
+}
+
+#completed {
+    opacity: 0;
+  position:absolute;
+    height: 100%;
+    width: 100%;
+   padding: 50px;
+   
+ 
+}
+
+@media only screen and (max-width: 700px) {
+    #all-todo {
+        padding: 50px 10px;
+    }
+    
+    
+    
+    
+    #todo {
+        
+       padding: 20px;
+    
+    }
+    
+    #completed {
+        padding: 20px 10px;
+     
+    }
+    
+}
+
+table {
+    width: 100% !important;
+
+    thead tr{
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+
+        
+    }
+    tbody {
+        display: block;
+        max-height: 500px; /* Adjust based on header/footer size */
+        overflow-y: auto;
+    }
+    tbody tr{
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 0px;
+     
+
+
+        
+    }
+
+    thead tr th:first-child {
+      flex-grow: 1;
+    }
+    thead tr th:last-child {
+      flex-basis: 120px;
+      text-align: center;
+    }
+    tbody tr td:first-child {
+      flex-grow: 1;
+      height: 40px;
+      
+    }
+    tbody tr td:last-child {
+      flex-basis: 120px;
+      text-align: center;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      font-size: 18px;
+      height: 40px;
+    }
+
+  
+    tbody tr td:last-child i:first-child{
+        color: green;
+       
+       
+        cursor: pointer;
+    }
+    tbody tr td:last-child i:nth-child(2){
+        color: #298EC8;
+       
+        cursor: pointer;
+       
+      
+    }
+    tbody tr td:last-child i:nth-child(3){
+        color: red;
+       
+        cursor: pointer;
+  
+        
+        cursor: pointer;
+    }
+}
+
+#completed {
+    h1 {
+        color: red;
+    }
+}
+
+.fa-trash {
+    color: rgba(255, 0, 0, 0.596) !important;
+}
+
+#completed .fa-circle-check {
+color:green;
+margin: 5px;
+}
+
+
+/* For Note Page */
+
+
+.note-list  {
+    padding: 0px;
+     margin-top: 80px;
+     height: 175px;
+     position: relative;
+     box-shadow: blue 0px 0px 0px 2px inset, rgb(255, 255, 255) 10px -10px 0px -3px, rgb(31, 193, 27) 10px -10px, rgb(255, 255, 255) 20px -20px 0px -3px, rgb(255, 217, 19) 20px -20px, rgb(255, 255, 255) 30px -30px 0px -3px, rgb(255, 156, 85) 30px -30px, rgb(255, 255, 255) 40px -40px 0px -3px, rgb(255, 85, 85) 40px -40px;
+    h4 {
+        padding: 20px;
+    }
+    li {
+        background-color: white;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        list-style: none;
+        box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+         padding: 30px;
+         overflow: auto;
+          transition: all 1s ease;
+         box-sizing: border-box;
+         margin: 0px;
+          
+         .list-close {
+            color: red;
+            border: 2px solid red;
+            display: inline-block;
+            width: 22px;
+            height: 22px;
+            line-height: 1;
+            text-align: center;
+            border-radius: 100%;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+         }
+        
+    }
+
+    
+
+    
+    
+}

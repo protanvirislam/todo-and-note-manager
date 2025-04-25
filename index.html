@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Link Bootstrap -->
+    <link rel="stylesheet" href="./assets/bootstrap.min (1).css" />
+
+    <!-- Link FontAwesome Icon -->
+    <script
+      src="https://kit.fontawesome.com/3695f62a44.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Link Stylesheet -->
+    <link rel="stylesheet" href="styles.css" />
+    <title>Your Daily To Do Task</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="container-left">
+        <!-- Todo group -->
+        <div class="todo-group">
+          <div title="all todos" data-set="0" class="all-todo">
+            <i class="fa-solid fa-list-ul"></i>
+          </div>
+          <div title="notes" data-set="1" class="todo">
+            <i class="fa-solid fa-notes-medical"></i>
+          </div>
+          <div title="completed Task" data-set="2" class="completed">
+            <i class="fa-solid fa-circle-check"></i>
+          </div>
+        </div>
+
+        <!-- My Profile -->
+        <div class="profile">
+          <img
+            src="./openart-54a446560ce04ddda9c14f2d99d9ae4e_raw_upscaled.jpg"
+            alt="profile picture"
+          />
+        </div>
+      </div>
+
+      <div class="container-right">
+        <div id="all-todo">
+          <form action="" class="input-group mb-3">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Add Your Daily Task...."
+              aria-label="Daily Task"
+              aria-describedby="button-addon2"
+              id="task-field"
+            />
+            <button class="btn btn-primary" type="submit" id="button-addon2">
+              ADD TASK
+            </button>
+          </form>
+
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">Active</th>
+                <th scope="col">Setting</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+
+        <div id="todo">
+          <div>
+            
+            <input
+              type="text"
+              class="form-control mt-4"
+              id="Title"
+              aria-describedby="titleHelp"
+              placeholder="Your Title..."
+            />
+
+            
+            <textarea
+              class="form-control mt-4"
+              id="Description"
+              rows="3"
+              placeholder="Write Description..."
+            ></textarea>
+
+            
+          <button type="button" class=" mt-4 btn btn-primary add-note">Add Note</button>
+          </div>
+
+          <div class="note-container">
+           
+            <ul class="note-list">
+             
+
+              <li>
+                 <!-- <h5 class="note-title">Your Title 1</h5>
+                 <p class="note-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil, doloremque molestias ipsum ex pariatur autem voluptate ratione ad earum reiciendis iure accusamus odit. Doloremque laborum quis ea quidem explicabo </p>
+                <div class="list-close">X</div> -->
+              </li>
+            </ul>
+          </div>
+          
+        </div>
+
+        <div id="completed">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">Completed</th>
+                <th scope="col">Remove</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <!-- Link Script -->
+    <script src="./script.js"></script>
+  </body>
+</html>
